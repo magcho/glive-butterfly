@@ -1,0 +1,95 @@
+body{
+  background-color: black;
+}
+
+.wing {
+  height: 109px;
+  width: 150px;
+  background-color: none;
+  position: absolute;
+}
+
+#wingl1 {
+  /* animation: flying1 5s 0s alternate both infinite; */
+  animation-name: flying1;
+  animation-duration: alternate;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-play-state: running;
+}
+
+#wingl2 {
+  /* animation: flying1 5s 0.5s alternate both infinite; */
+   animation-name: flying1;
+  animation-duration: alternate;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-play-state: running;
+}
+
+#wingr1 {
+  /* animation: flying2 5s 0s alternate both infinite; */
+   animation-name: flying2;
+  animation-duration: alternate;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-play-state: running;
+}
+
+#wingr2 {
+  /* animation: flying2 5s 0.5s alternate both infinite; */
+   animation-name: flying2;
+  animation-duration: alternate;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-play-state: running;
+}
+
+@keyframes flying1 {
+  0% {
+    transform: rotateY(+0deg);
+  }
+  50% {
+    transform: rotateY(+70deg);
+  }
+  100% {
+    transform: rotateY(+0deg);
+  }
+}
+
+@keyframes flying2 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(-70deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+
+
+.playarea{
+  width: 1280px;
+  height: 720px;
+  background-color: white;
+  position: absolute;
+  x:0px;
+  y:0px;
+}
+.butterfly{
+  height: 218px;
+  width: 300px;
+  position: absolute;
+
+}

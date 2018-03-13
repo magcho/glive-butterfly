@@ -1,0 +1,219 @@
+.area {
+  padding: auto;
+  display: block;
+  height: 218px;
+  width: 300px;
+  /* background-color: rgb(183, 251, 154); */
+  /* transform: rotate3d(1,0,0,60deg); */
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.5s 0s line;
+  opacity: 1s
+}
+.area-send{
+  height: 218px;
+  width: 300px;
+  transition: all 2s 0s ease;
+  transform: translateY(-300px) translateX(-50px) rotateZ(-40deg);
+}
+
+.wing {
+  height: 218px;
+  width: 300px;
+  background-color: none;
+  position: absolute;
+  x: 0px;
+  y: 0px;
+}
+
+.wingl1 {
+  /* animation: flying1 alternate both infinite; */
+  /* animation-name: flying1  jsで動的に付与*/
+  animation-duration: alternate;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-play-state: running;
+}
+
+.wingl2 {
+  /* animation: flying1 5s 0.5s alternate both infinite; */
+  /* animation-name: flying1  jsで動的に付与*/
+  animation-duration: alternate;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-play-state: running;
+}
+
+.wingr1 {
+  /* animation: flying2 5s 0s alternate both infinite; */
+  /* animation-name: flying2  jsで動的に付与*/
+  animation-duration: alternate;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-play-state: running;
+}
+
+.wingr2 {
+  /* animation: flying2 5s 0.5s alternate both infinite; */
+  /* animation-name: flying2  jsで動的に付与*/
+  animation-duration: alternate;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-play-state: running;
+}
+
+@keyframes flying1 {
+  0% {
+    transform: rotateY(+0deg);
+  }
+  50% {
+    transform: rotateY(+70deg);
+  }
+  100% {
+    transform: rotateY(+0deg);
+  }
+}
+
+@keyframes flying2 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(-70deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes flying1-send {
+  0% {
+    transform: rotateY(+0deg);
+  }
+  10% {
+    transform: rotateY(+70deg);
+  }
+  20% {
+    transform: rotateY(+0deg);
+  }
+  30% {
+    transform: rotateY(+70deg);
+  }
+  40% {
+    transform: rotateY(+0deg);
+  }
+  50% {
+    transform: rotateY(+0deg);
+  }
+  60% {
+    transform: rotateY(+70deg);
+  }
+  70% {
+    transform: rotateY(+0deg);
+  }
+  80% {
+    transform: rotateY(+70deg);
+  }
+  90% {
+    transform: rotateY(+0deg);
+  }
+}
+
+@keyframes flying2-send {
+  0% {
+    transform: rotateY(+0deg);
+  }
+  10% {
+    transform: rotateY(-70deg);
+  }
+  20% {
+    transform: rotateY(+0deg);
+  }
+  30% {
+    transform: rotateY(-70deg);
+  }
+  40% {
+    transform: rotateY(+0deg);
+  }
+  50% {
+    transform: rotateY(+0deg);
+  }
+  60% {
+    transform: rotateY(-70deg);
+  }
+  70% {
+    transform: rotateY(+0deg);
+  }
+  80% {
+    transform: rotateY(-70deg);
+  }
+  90% {
+    transform: rotateY(+0deg);
+  }
+}
+
+/* slider */
+
+.input-range[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #eaeaea;
+  height: 2px;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.input-range[type="range"]:focus, .input-range[type="range"]:active {
+  outline: none;
+}
+
+.input-range[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  display: block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+#red::-webkit-slider-thumb {
+  background-color: #be0707;
+}
+
+#green::-webkit-slider-thumb {
+  background-color: #07be19;
+}
+
+#blue::-webkit-slider-thumb {
+  background-color: #0713be;
+}
+
+#pushBtn {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#sendBtn {
+  font-size: 2em
+}
+
+
+input#btnChangeData.btn.btn-success{
+  width: 80%;
+  font-weight: bold;
+  font-size: 3em;
+}
