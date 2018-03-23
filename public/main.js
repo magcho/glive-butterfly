@@ -9,7 +9,8 @@ let area = new Vue({
       hex: '000000'
     },
     colors:[],
-    sendWingFlag: false
+    sendWingFlag: false,
+    blackFlag: true
   },
   methods:{
     addColor: function(value){
@@ -75,6 +76,7 @@ window.onload = function() {
   // cssアニメ発火
   newButterfly();
   document.getElementById("btnChangeData").onclick = changeData;
+  document.getElementById("summary").onclick = removeSummary;
 };
 
 
@@ -100,4 +102,10 @@ function sendWingAnime(){
   setTimeout(function () {
     newButterfly();
   }, 1000);
+}
+
+function removeSummary(){
+  area._data.blackFlag = false;
+  
+  // document.getElementById("body").onclick = '';
 }
